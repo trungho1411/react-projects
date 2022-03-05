@@ -1,0 +1,62 @@
+GET http://localhost:3003/api/blogs
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5haXN3YW4iLCJpZCI6IjYxZmE5OTY2YWQ4NjQxNTc2YzAyMTgwMSIsImlhdCI6MTY0NTk2MzQ3MH0.IEM0JWg8zNStIJzcM_zQpCcZQQX-Wt_127SWBiJLwfE
+
+###
+
+GET http://localhost:3003/api/users
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRydW5naG8iLCJpZCI6IjYxZTMxMWQ2OGVkODkwMDgxOWRkZGJhOSIsImlhdCI6MTY0MjM0MjQ0OH0.JjxkhKpR0pf6jeuvvKJzzD-c1QIiCvZlNAkpip-VdiM
+
+###
+
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5haXN3YW4iLCJpZCI6IjYxZmE5OTY2YWQ4NjQxNTc2YzAyMTgwMSIsImlhdCI6MTY0NTM2MjY4OX0.icmmaQNQ_PDWs2i_nSz_bg6JpFvUubG3aEMLIbEdLnM
+
+{
+    "title" : "hello",
+    "author" : "John",
+    "url" : "www.test.gs",
+    "likes" : 100
+}
+
+###
+DELETE http://localhost:3001/api/blogs/61e42a944d38c031fe24943f
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRydW5naG8iLCJpZCI6IjYxZTMxMWQ2OGVkODkwMDgxOWRkZGJhOSIsImlhdCI6MTY0MjM0MjQ0OH0.JjxkhKpR0pf6jeuvvKJzzD-c1QIiCvZlNAkpip-VdiM
+
+
+###
+PUT http://localhost:3001/api/blogs/61ddd45f7f701d65f0e0afdd
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRydW5naG8iLCJpZCI6IjYxZDg0YzE5OGRkYWJlY2QwNmU1MzhmYSIsImlhdCI6MTY0MTkyNzQ5NH0.NBxSqQ6QxJLPnxNrcHB5hdsU6ifxpbvLf02NqxeC91E
+
+{
+    "likes" : 500
+}
+###
+GET http://localhost:3003/api/blogs/61ddd45f7f701d65f0e0afdd
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRydW5naG8iLCJpZCI6IjYxZDg0YzE5OGRkYWJlY2QwNmU1MzhmYSIsImlhdCI6MTY0MTkyNzQ5NH0.NBxSqQ6QxJLPnxNrcHB5hdsU6ifxpbvLf02NqxeC91E
+
+###
+POST http://localhost:3003/api/users
+Content-Type: application/json 
+{
+    "username" : "naiswan",
+    "name" : "Trungdepzai",
+    "password" : "54321",
+    
+}
+
+###
+
+POST http://localhost:3003/api/testing/reset
+Content-Type: application/json 
+
+
+### 
+POST http://localhost:3003/api/blogs/62123e2350c5354b147c52cd/comments
+Content-Type: application/json 
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5haXN3YW4iLCJpZCI6IjYxZmE5OTY2YWQ4NjQxNTc2YzAyMTgwMSIsImlhdCI6MTY0NTk2Mzk5Mn0.H-5HsPoxMqhdlaqau1j3Gr1z6x2Cu7zlHtd2vIMW75Y
+
+{
+    "comment" : "first comment"
+}
